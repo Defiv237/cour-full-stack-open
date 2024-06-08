@@ -33,36 +33,37 @@ const Total = (props) => {
 }
 
 const App = () => {
-  const course = 'Half Stack application development'
-  const parts = [
-    {
-      name: 'Fundamentals of React',
-      exercises: 10
-    },
-    {
-      name: 'Using props to pass data',
-      exercises: 7
-    },
-    {
-      name: 'State of a component',
-      exercises: 14
-    }
-  ]
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
 
 
   return (
     <div>
-      <Header course={course} />
+      <Header course={course.name} />
       
       
       {
-        parts.map(value => {
-          console.log(value);
+        course.parts.map(value => {
           return <p>{value.name} {value.exercises} </p>
         })
       }
     
-      <Total tot={parts.reduce((acc, part) => acc + part.exercises, 0)}/>
+      <Total tot={course.parts.reduce((acc, part) => acc + part.exercises, 0)}/>
     </div>
   )
 }
