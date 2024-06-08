@@ -1,13 +1,28 @@
 import { useState } from 'react'
 
 function Other() {
-    const t = [1, 2, 3]
+    const t = [
+        {
+            name: 'Fundamentals of React',
+            exercises: 10
+          },
+          {
+            name: 'Using props to pass data',
+            exercises: 7
+          },
+          {
+            name: 'State of a component',
+            exercises: 14
+          }
+    ]
 
-    const m1 = t.map(value => value * 2)
-    console.log(m1)   // [2, 4, 6] est affiché
-    const m2 = t.map(value => '<li>' + value + '</li>')
-    console.log(m2)
-    // [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] est affiché
+
+t.forEach(value => {
+  console.log(value.name)
+})
+t.forEach(value => {
+    console.log(value.exercises)
+  })  
 }
 
 export default Other
