@@ -5,5 +5,6 @@ import Other from './Other.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<App />)
-// root.render(<Other />)
+
+// root.render(<App />)
+    root.render(<Other />)
